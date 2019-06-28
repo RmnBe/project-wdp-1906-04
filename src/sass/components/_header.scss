@@ -185,7 +185,7 @@ header {
           z-index: 0;
         }
 
-        select {
+        .selectUl {
           -webkit-appearance: none;
           border: 0;
           background-color: transparent;
@@ -194,6 +194,60 @@ header {
           font-size: 14px;
           position: relative;
           z-index: 1;
+          display: block;
+          color: $primary;
+          max-height: 40px;
+          min-width: 300px;
+          text-align: center;
+
+          .selectLi {
+            display: inline-block;
+            color: $primary;
+            text-decoration: none;
+            &:hover {
+              background-color: $primary;
+              color: white;
+            }
+
+            .selectA {
+              display: inline-block;
+              line-height: 50px;
+              padding: 0 10px;
+              color: $primary;
+              text-decoration: none;
+              min-width: 300px;
+              &:hover {
+                background-color: $primary;
+                color: white;
+              }
+
+              .selectWrappedUl {
+                display: none;
+                list-style-type: none;
+
+                .selectWrappedLi {
+                  display: block;
+                  &:hover {
+                    background-color: $primary;
+                    color: white;
+                  }
+
+                  .selectWrappedA {
+                    border-top: 1px solid #ffffff;
+                    display: inline-block;
+                    line-height: 50px;
+                    padding: 0 10px;
+                    color: #ffffff;
+                    text-decoration: none;
+                    &:hover {
+                      background-color: $primary;
+                      color: white;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
 
