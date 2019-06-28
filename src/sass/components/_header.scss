@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $secondcolor;
           font-size: 13px;
 
           &:hover {
@@ -69,7 +69,7 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $secondcolor;
 
         .cart-icon {
           background-color: $primary;
@@ -113,7 +113,7 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $secondcolor;
 
     .container > .row {
       height: 84px;
@@ -141,14 +141,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $secondcolor;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $secondcolor;
               border-color: $primary;
             }
 
@@ -202,11 +202,11 @@ header {
 
           .selectLi {
             display: inline-block;
-            color: $primary;
+            color: #000000;
             text-decoration: none;
             &:hover {
               background-color: $primary;
-              color: white;
+              color: $secondcolor;
             }
 
             .selectA {
@@ -218,7 +218,7 @@ header {
               min-width: 300px;
               &:hover {
                 background-color: $primary;
-                color: white;
+                color: $secondcolor;
               }
 
               .selectWrappedUl {
@@ -229,19 +229,19 @@ header {
                   display: block;
                   &:hover {
                     background-color: $primary;
-                    color: white;
+                    color: $secondcolor;
                   }
 
                   .selectWrappedA {
-                    border-top: 1px solid #ffffff;
+                    border-top: 1px solid $secondcolor;
                     display: inline-block;
                     line-height: 50px;
                     padding: 0 10px;
-                    color: #ffffff;
+                    color: $secondcolor;
                     text-decoration: none;
                     &:hover {
                       background-color: $primary;
-                      color: white;
+                      color: $secondcolor;
                     }
                   }
                 }
