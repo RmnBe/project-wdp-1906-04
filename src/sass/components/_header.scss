@@ -171,6 +171,8 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        text-align: center;
+        min-width: 250px;
 
         i:first-child {
           color: $primary;
@@ -185,68 +187,37 @@ header {
           z-index: 0;
         }
 
-        .selectUl {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-          display: block;
+        li {
+          display: inline-block;
+        }
+        a {
+          display: inline-block;
+          padding: 0 10px;
+          text-decoration: none;
           color: $primary;
-          max-height: 40px;
-          min-width: 300px;
-          text-align: center;
-
-          .selectLi {
-            display: inline-block;
-            color: #000000;
-            text-decoration: none;
-            &:hover {
-              background-color: $primary;
-              color: $secondcolor;
-            }
-
-            .selectA {
-              display: inline-block;
-              line-height: 50px;
-              padding: 0 10px;
-              color: $primary;
-              text-decoration: none;
-              min-width: 300px;
-              &:hover {
-                background-color: $primary;
-                color: $secondcolor;
-              }
-
-              .selectWrappedUl {
-                display: none;
-                list-style-type: none;
-
-                .selectWrappedLi {
-                  display: block;
-                  &:hover {
-                    background-color: $primary;
-                    color: $secondcolor;
-                  }
-
-                  .selectWrappedA {
-                    border-top: 1px solid $secondcolor;
-                    display: inline-block;
-                    line-height: 50px;
-                    padding: 0 10px;
-                    color: $secondcolor;
-                    text-decoration: none;
-                    &:hover {
-                      background-color: $primary;
-                      color: $secondcolor;
-                    }
-                  }
-                }
-              }
-            }
+          border-top: 1px solid #fff;
+          &:hover {
+            background-color: $primary;
+            color: $text-color;
+          }
+        }
+        li:hover {
+          background-color: $primary;
+          color: $text-color;
+          z-index: 1;
+        }
+        ul ul li {
+          display: block;
+        }
+        > ul > li {
+          > ul {
+            display: none;
+          }
+          &:hover > ul {
+            display: block;
+            position: absolute;
+            background-color: $primary;
+            text-align: center;
           }
         }
       }
