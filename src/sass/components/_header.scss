@@ -239,12 +239,13 @@ header {
 
   header .company-claim .container > .row {
     height: 180px;
+    text-align: right;
   }
 
   header .company-claim .phone-number {
     position: absolute;
     top: 180px;
-    left: 450px;
+    right: 10px;
     font-size: 14px;
   }
 
