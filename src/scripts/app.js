@@ -3,6 +3,7 @@ console.log('hello');
 // section display
 
 var bookmarks = document.getElementById('bookmarks');
+var link = document.querySelectorAll('#bookmarks ul li a');
 
 bookmarks.addEventListener('click', function (event) {
   event.preventDefault();
@@ -10,7 +11,8 @@ bookmarks.addEventListener('click', function (event) {
   var id = elem.getAttribute('href');
   document.querySelector('.sectionDisplay.show').classList.remove('show');
   document.querySelector(id).classList.add('show');
-  document.querySelector('.sectionActive.active').classList.remove('active');
-  // tu coś nie tak nie wiem jak się dobrać do tego elementu
-  document.querySelector(id).classList.add('active');
+  for (let i = 0; i < link.length; i++) {
+    link[i].classList.remove('active');
+  }
+  elem.classList.add('active');
 });
