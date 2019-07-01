@@ -126,5 +126,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .active {
+      @extend .btn-outline;
+      color: #d58e32;
+      border-color: #d58e32;
+
+      &:hover {
+        border-color: #d58e32;
+        color: #d58e32;
+        background-color: #fff;
+      }
+    }
   }
 }
