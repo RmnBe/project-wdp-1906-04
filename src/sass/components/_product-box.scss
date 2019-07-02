@@ -5,7 +5,7 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    padding: 40px 10px 0 10px;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -26,10 +26,58 @@
       padding: 30px 15px 5px 15px;
     }
 
+    a {
+      img {
+        vertical-align: middle;
+        border-style: none;
+        max-width: 230px;
+        max-height: 200px;
+      }
+    }
+
     .buttons {
       display: flex;
       justify-content: space-between;
     }
+    .marginButtons {
+      margin-top: 150px;
+    }
+  }
+  .bed1 {
+    background-image: url("https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed2 {
+    background-image: url("https://images.pexels.com/photos/879010/pexels-photo-879010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed3 {
+    background-image: url("https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed4 {
+    background-image: url("https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed5 {
+    background-image: url("https://images.pexels.com/photos/1608172/pexels-photo-1608172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed6 {
+    background-image: url("https://images.pexels.com/photos/1834707/pexels-photo-1834707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed7 {
+    background-image: url("https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .bed8 {
+    background-image: url("https://images.pexels.com/photos/1608178/pexels-photo-1608178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  }
+
+  .backgroundImage {
+    background-size: cover;
+    min-height: 200px;
   }
 
   .content {
@@ -78,5 +126,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .active {
+      @extend .btn-outline;
+      color: #d58e32;
+      border-color: #d58e32;
+
+      &:hover {
+        border-color: #d58e32;
+        color: #d58e32;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .starting-price {
+    font-size: 13px;
+    color: #ababab;
+    padding-left: 40px;
+    text-decoration: line-through;
   }
 }
