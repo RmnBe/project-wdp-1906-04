@@ -191,16 +191,23 @@ header {
 
         li {
           display: inline-block;
+          width: 170px;
         }
         a {
           display: inline-block;
           padding: 0 10px;
           text-decoration: none;
-          color: $primary;
-          border-top: 1px solid #fff;
+          text-align: center;
+          color: $text-color;
+          line-height: 16px;
+          z-index: 1;
           &:hover {
-            background-color: $primary;
+            background-color: #f7be62;
             color: $text-color;
+            text-align: center;
+            line-height: 16px;
+            width: inherit;
+            height: inherit;
           }
         }
         li:hover {
