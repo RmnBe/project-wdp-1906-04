@@ -1,6 +1,18 @@
 .post-box {
   margin-bottom: 2rem;
 
+  &:hover {
+    text-decoration: none;
+
+    .btn-post {
+      background-color: #d58e32;
+    }
+
+    .post-title {
+      color: $primary;
+    }
+  }
+
   .cover {
     padding: 10% 25px 0 25px;
     background: {
@@ -9,13 +21,11 @@
       position: center;
     }
 
-    a {
-      img {
-        vertical-align: middle;
-        border-style: none;
-        max-width: 300px;
-        max-height: 200px;
-      }
+    img {
+      vertical-align: middle;
+      border-style: none;
+      max-width: 300px;
+      max-height: 200px;
     }
 
     .details {
@@ -30,10 +40,12 @@
 
       .date {
         text-align: left;
+        color: #000;
       }
 
       .comments {
         text-align: right;
+        color: #000;
       }
     }
   }
@@ -42,7 +54,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: #000;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -57,7 +69,13 @@
 
     .more {
       text-align: center;
-      padding-top: 30px;
+      padding-top: 16px;
+    }
+
+    .btn-post {
+      border: none;
+      cursor: pointer;
+      outline: none;
     }
   }
 }
