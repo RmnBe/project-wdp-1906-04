@@ -9,6 +9,13 @@
       position: center;
     }
 
+    img {
+      vertical-align: middle;
+      border-style: none;
+      max-width: inherit;
+      max-height: inherit;
+    }
+
     .details {
       padding: 15px 20px;
       display: flex;
@@ -28,23 +35,6 @@
         text-align: right;
       }
     }
-  }
-
-  .backgroundImage {
-    background-size: cover;
-    min-height: 200px;
-  }
-
-  .blogImage1 {
-    background-image: url("https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .blogImage2 {
-    background-image: url("https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .blogImage3 {
-    background-image: url("https://images.pexels.com/photos/2380176/pexels-photo-2380176.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   }
 
   .post-info {
