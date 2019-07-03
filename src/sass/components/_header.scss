@@ -237,31 +237,44 @@ header {
     }
   }
 
-  header .company-claim .container > .row {
-    height: 180px;
-    text-align: right;
-  }
+  header {
+    .company-claim {
+      .container {
+        > .row {
+          height: 180px;
+          text-align: right;
 
-  header .company-claim .phone-number {
-    position: absolute;
-    top: 180px;
-    right: 10px;
-    font-size: 14px;
-  }
+          .phone-number {
+            position: absolute;
+            top: 180px;
+            right: 20px;
+            p {
+              font-size: 14px;
+            }
+          }
 
-  .text-center img {
-    text-align: left;
-    float: left;
-  }
-
-  header .company-claim .cart .cart-box .cart-icon {
-    position: absolute;
-    top: -40px;
-    left: -50px;
-  }
-  header .company-claim .cart .cart-box .cart-counter {
-    position: absolute;
-    top: -15px;
-    left: -20px;
+          .text-center {
+            img {
+              text-align: left;
+              float: left;
+            }
+          }
+          .cart {
+            .cart-box {
+              .cart-icon {
+                position: absolute;
+                top: -40px;
+                left: -50px;
+              }
+              .cart-counter {
+                position: absolute;
+                top: -15px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
