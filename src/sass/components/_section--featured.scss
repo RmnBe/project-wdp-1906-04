@@ -1,0 +1,57 @@
+.product-box {
+  border: 1px solid #e1e1e1;
+  .hot-deals {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-bottom: 0;
+    .dots {
+      display: flex;
+      ul {
+        li {
+          a {
+            display: block;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .outlines {
+    }
+  }
+}
+.promotion-right {
+  .photo {
+    position: relative;
+  }
+  .promotion-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    .promotion-arrow-btn {
+      width: 50%;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
+.promotion-right-2 {
+  display: none;
+}
