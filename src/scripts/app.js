@@ -1,5 +1,3 @@
-console.log('hello');
-
 // section display
 
 var bookmarks = document.getElementById('bookmarks');
