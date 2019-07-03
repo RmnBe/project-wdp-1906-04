@@ -117,108 +117,207 @@ header {
 
     .container > .row {
       height: 84px;
+      @include media-breakpoint-between(sm, md) {
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+      }
+    }
+
+    .logo-wrapper {
+      position: relative;
+    }
+
+    .logo-img {
+      @include media-breakpoint-between(xs, xl) {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+
+        a {
+          color: $text-color;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding: 1rem;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          border-top: 4px solid #ffffff;
+          font-weight: 500;
+          letter-spacing: 1px;
+
+          &:hover,
+          &.active {
+            background-color: $primary;
+            color: #ffffff;
+            border-color: $primary;
+          }
+
+          &.active {
+            border-color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-btn {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+    @include media-breakpoint-down(xs) {
+      background-color: white;
+      border: 1px solid #000;
+      outline: none;
+      padding: 9.5px 15px;
+    }
+  }
+
+  .form-wrapper {
+    width: auto;
+  }
+
+  .search-form {
+    border: 1px solid $form-border-color;
+    display: inline-flex;
+    height: 45px;
+    color: $text-color;
+    margin: 15px 0;
+
+    .category {
+      border-right: 1px solid $form-border-color;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      i:first-child {
+        color: $primary;
+        position: absolute;
+        left: 10px;
+        z-index: 0;
+      }
+
+      i:last-child {
+        position: absolute;
+        right: 10px;
+        z-index: 0;
+      }
+
+      select {
+        -webkit-appearance: none;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        padding: 5px 30px 5px 35px;
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .search-field {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input {
+        border: 0;
+        padding-left: 10px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+          color: $text-color;
+        }
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        @include media-breakpoint-between(lg, xl) {
+          position: absolute;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+
+//HAMBURGER
+body.active-menu {
+  header {
+    .menu-bar {
+      height: 100vh;
+      background-color: #fff;
+      transition: 0.4s;
+      z-index: 100;
+    }
+    .container > .row {
+      .logo-img {
+        display: block;
+      }
     }
 
     .menu {
-      display: flex;
-      align-self: stretch;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-
-        li {
-          list-style: none;
-          display: flex;
-          align-items: stretch;
-
-          a {
-            color: $text-color;
-            text-transform: uppercase;
-            font-size: 12px;
-            padding: 1rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            border-top: 4px solid #ffffff;
-            font-weight: 500;
-            letter-spacing: 1px;
-
-            &:hover,
-            &.active {
-              background-color: $primary;
-              color: #ffffff;
-              border-color: $primary;
-            }
-
-            &.active {
-              border-color: $text-color;
-            }
-          }
-        }
+      @include media-breakpoint-down(xs) {
+        display: block;
       }
     }
 
-    .search-form {
-      border: 1px solid $form-border-color;
-      display: inline-flex;
-      height: 45px;
-      color: $text-color;
-
-      .category {
-        border-right: 1px solid $form-border-color;
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        i:first-child {
-          color: $primary;
-          position: absolute;
-          left: 10px;
-          z-index: 0;
-        }
-
-        i:last-child {
-          position: absolute;
-          right: 10px;
-          z-index: 0;
-        }
-
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-        }
+    .menu-btn {
+      @include media-breakpoint-down(xs) {
+        background-color: white;
+        border: none;
+        font-size: 25px;
+        outline: none;
+        display: block;
+        position: static;
       }
+    }
 
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
+    .menu-list {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
 
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
+    .top-bar {
+      display: none;
+    }
 
-          &::placeholder {
-            color: $text-color;
-          }
-        }
+    .company-claim {
+      display: none;
+    }
 
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
-        }
-      }
+    .form-wrapper {
+      display: none;
+    }
+    .logo-active-menu-wrapper {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      padding: 30px;
     }
   }
 }
