@@ -18,6 +18,7 @@ header {
           &:hover {
             color: $primary;
             text-decoration: none;
+            @extend .animation-transition;
           }
         }
       }
@@ -105,6 +106,7 @@ header {
         &:hover {
           .cart-icon {
             background-color: lighten($primary, 10%);
+            @extend .animation-transition;
           }
         }
       }
@@ -150,6 +152,7 @@ header {
               background-color: $primary;
               color: #ffffff;
               border-color: $primary;
+              @extend .animation-transition;
             }
 
             &.active {
