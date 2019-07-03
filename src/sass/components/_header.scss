@@ -239,6 +239,7 @@ header {
 
   header {
     .company-claim {
+      position: relative;
       .container {
         > .row {
           height: 180px;
@@ -246,8 +247,8 @@ header {
 
           .phone-number {
             position: absolute;
-            top: 180px;
-            right: 20px;
+            top: 120px;
+            right: 10px;
             p {
               font-size: 14px;
             }
