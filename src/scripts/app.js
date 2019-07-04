@@ -1,8 +1,8 @@
 console.log('hello');
 
 // CHANGE MENU SIZE WHEN CLICK TO HAMBURGER < 576PX
-function toggleMenu (visible) {
-  document.querySelector('body').classList.toggle('active-menu', visible);
+function toggleMenu () {
+  document.querySelector('body').classList.toggle('active-menu');
   document.querySelector('#hamburger').classList.toggle('active-menu-btn');
 }
 
