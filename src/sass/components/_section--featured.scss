@@ -41,6 +41,11 @@
       }
     }
   }
+  .photo {
+    background-image: url(https://images.pexels.com/photos/879010/pexels-photo-879010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    overflow: hidden;
+  }
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
@@ -54,6 +59,9 @@
   border: 1px solid #e1e1e1;
   text-transform: uppercase;
   .photo {
+    background-image: url(https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    overflow: hidden;
     position: relative;
     padding: 60% 0 0;
   }
