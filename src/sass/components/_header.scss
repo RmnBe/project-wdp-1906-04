@@ -224,20 +224,32 @@ header {
 }
 
 @media (max-width: 768px) {
-  .text-right ul li {
-    margin-left: 0.5rem;
-  }
-  header .top-bar .text-right ul li a {
-    font-size: 0;
-    justify-content: flex-end;
-
-    i {
-      font-size: 13px;
-      margin-right: 10px;
-    }
-  }
-
   header {
+    .top-bar {
+      .text-left {
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .text-right {
+        width: 150px;
+        ul {
+          li {
+            margin-left: 0.5rem;
+            a {
+              font-size: 0;
+              justify-content: flex-end;
+              i {
+                font-size: 13px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
     .company-claim {
       position: relative;
       .container {
