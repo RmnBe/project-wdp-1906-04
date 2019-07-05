@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $secondcolor;
           font-size: 13px;
 
           &:hover {
@@ -70,7 +70,7 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $secondcolor;
 
         .cart-icon {
           background-color: $primary;
@@ -115,12 +115,14 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $secondcolor;
 
     .container > .row {
       height: 84px;
     }
-
+    .menuWrapped {
+      margin-top: 16px;
+    }
     .menu {
       display: flex;
       align-self: stretch;
@@ -143,14 +145,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $secondcolor;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $secondcolor;
               border-color: $primary;
               @extend .animation-transition;
             }
@@ -172,8 +174,9 @@ header {
       .category {
         border-right: 1px solid $form-border-color;
         display: flex;
-        align-items: center;
         position: relative;
+        text-align: center;
+        min-width: 250px;
 
         i:first-child {
           color: $primary;
@@ -188,15 +191,55 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
+        .menuWrapped {
+          margin: 0;
+          padding: 0;
+          width: 100%;
           position: relative;
-          z-index: 1;
+          z-index: 2;
+
+          li {
+            list-style: none;
+            width: 100%;
+            height: 45px;
+            display: block;
+
+            a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+
+              &:hover {
+                background-color: #f7be62;
+                color: $text-color;
+                text-align: center;
+                line-height: 16px;
+                width: inherit;
+                height: inherit;
+              }
+            }
+
+            ul {
+              margin: 0;
+              padding: 0;
+              opacity: 0;
+              position: absolute;
+              color: $text-color;
+              background: $secondcolor;
+              width: 100%;
+              border: 1px solid $form-border-color;
+              border-top: none;
+            }
+
+            &:hover {
+              ul {
+                opacity: 1;
+              }
+            }
+          }
         }
       }
 
