@@ -268,3 +268,149 @@ header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    .top-bar {
+      .text-left {
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .text-right {
+        width: 150px;
+        ul {
+          li {
+            margin-left: 0.5rem;
+            a {
+              font-size: 0;
+              justify-content: flex-end;
+              i {
+                font-size: 13px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .company-claim {
+      position: relative;
+      .container {
+        > .row {
+          height: 180px;
+          text-align: right;
+
+          .phone-number {
+            position: absolute;
+            top: 120px;
+            right: 10px;
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .text-center {
+            img {
+              text-align: left;
+              float: left;
+            }
+          }
+          .cart {
+            .cart-box {
+              .cart-icon {
+                position: absolute;
+                top: -40px;
+                left: -50px;
+              }
+              .cart-counter {
+                position: absolute;
+                top: -15px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    .top-bar {
+      .icon-left {
+        margin: 0;
+        padding-right: 0;
+        max-width: 200px;
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .icon-right {
+        margin: 0;
+        padding-left: 0;
+        max-width: 120px;
+        right: -30px;
+        ul {
+          margin: 0;
+          li {
+            margin-left: 0.5rem;
+            a {
+              font-size: 0;
+              justify-content: flex-end;
+              i {
+                font-size: 13px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .company-claim {
+      position: relative;
+      .container {
+        > .row {
+          height: 220px;
+          text-align: right;
+
+          .phone-number {
+            position: absolute;
+            top: 170px;
+            right: 40px;
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .text-center {
+            img {
+              text-align: left;
+              float: left;
+            }
+          }
+          .cart {
+            right: 20px;
+            .cart-box {
+              .cart-icon {
+                position: absolute;
+                top: -40px;
+                left: -50px;
+              }
+              .cart-counter {
+                position: absolute;
+                top: -15px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
