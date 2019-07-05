@@ -10,6 +10,7 @@
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
+    @extend .animation-transition;
   }
 }
 
@@ -32,5 +33,11 @@
   &:hover {
     background-color: #2a2a2a;
     color: #ffffff;
+    @extend .animation-transition;
   }
+}
+
+.animation-transition {
+  transition: color $color-animation-duration,
+    background-color $background-color-animation-duration;
 }
