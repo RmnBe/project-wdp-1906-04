@@ -1,9 +1,11 @@
 .section--featured {
   padding: 5rem 0;
-  max-height: 550px;
+  max-height: 500px;
 }
 .product-box {
   border: 1px solid #e1e1e1;
+  height: 100%;
+  margin-bottom: 0;
   .hot-deals {
     display: flex;
     justify-content: space-between;
@@ -58,12 +60,14 @@
 .promotion-right {
   border: 1px solid #e1e1e1;
   text-transform: uppercase;
+  height: 100%;
   .photo {
     background-image: url(https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     background-size: cover;
     overflow: hidden;
     position: relative;
-    padding: 60% 0 0;
+    //padding: 60% 0 0;
+    height: calc(100% - 30px);
   }
   .promotion-buttons {
     display: flex;
@@ -75,7 +79,9 @@
       width: 50%;
       text-align: center;
       background-color: #000;
-      color: #fff;
+      a {
+        color: #fff;
+      }
       &:hover {
         background-color: $primary;
         @extend .animation-transition;
