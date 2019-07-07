@@ -4,11 +4,11 @@
 const slider = tns({
   container: '.my-slider',
   mode: 'carousel',
-  items: 2,
+  items: 1,
   autoWidth: true,
   slideBy: 'page',
-  center: true,
   speed: 400,
   autoplay: true,
+  loop: false,
   mouseDrag: true
 });
