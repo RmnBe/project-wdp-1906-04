@@ -1,12 +1,16 @@
 .section--blog-posts {
+  position: relative;
   .tns-horizontal.tns-subpixel > .tns-item {
     display: flex;
   }
   .my-slider {
+    position: relative;
+    display: block;
     .panel-bar {
     }
 
     .slider-item {
+      position: relative;
       .post-box {
         margin-bottom: 2rem;
 
