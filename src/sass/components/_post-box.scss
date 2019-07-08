@@ -1,8 +1,6 @@
 .section--blog-posts {
   position: relative;
-  .tns-horizontal.tns-subpixel > .tns-item {
-    display: flex;
-  }
+
   .my-slider {
     position: relative;
     display: block;
@@ -11,87 +9,6 @@
 
     .slider-item {
       position: relative;
-      .post-box {
-        margin-bottom: 2rem;
-
-        &:hover {
-          text-decoration: none;
-
-          .btn-post {
-            background-color: #d58e32;
-          }
-
-          .post-title {
-            color: $primary;
-          }
-        }
-
-        .cover {
-          padding: 10% 25px 0 25px;
-          background: {
-            color: #f4f5f7;
-            size: cover;
-            position: center;
-          }
-
-          img {
-            vertical-align: middle;
-            border-style: none;
-            max-width: 300px;
-            max-height: 200px;
-          }
-
-          .details {
-            padding: 15px 20px;
-            display: flex;
-            background-color: #ffffff;
-            font-size: 14px;
-
-            & > * {
-              flex: 1 1 auto;
-            }
-
-            .date {
-              text-align: left;
-              color: #000;
-            }
-
-            .comments {
-              text-align: right;
-              color: #000;
-            }
-          }
-        }
-
-        .post-info {
-          padding: 25px;
-
-          h5 {
-            color: #000;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 1px;
-          }
-
-          p {
-            font-size: 14px;
-            line-height: 24px;
-            color: rgb(103, 103, 103);
-            text-align: justify;
-          }
-
-          .more {
-            text-align: center;
-            padding-top: 16px;
-          }
-
-          .btn-post {
-            border: none;
-            cursor: pointer;
-            outline: none;
-          }
-        }
-      }
     }
   }
 }
