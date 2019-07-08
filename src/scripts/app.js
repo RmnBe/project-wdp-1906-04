@@ -6,5 +6,8 @@ const slider = tns({
   loop: false,
   items: 3,
   slideBy: 'page',
-  autoplay: true
+  autoplay: true,
+  autoWidth: true,
+  speed: 400,
+  mouseDrag: true
 });
