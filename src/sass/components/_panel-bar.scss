@@ -54,6 +54,7 @@
               left: 0;
               width: 100%;
               border-bottom: 4px solid $primary;
+              @extend .animation-transition;
             }
           }
         }
@@ -83,6 +84,7 @@
           &.active,
           &:hover {
             background-color: $primary;
+            @extend .animation-transition;
           }
         }
       }

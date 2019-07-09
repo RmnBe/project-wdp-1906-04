@@ -2,8 +2,24 @@
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
+  display: block;
+  height: calc(100% - 40px);
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    .icon {
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+    }
+  }
+  &:hover {
+    .content {
+      color: $primary;
+    }
+  }
 
-  .icon {
+  .icon-wrapper {
     transform: translateY(-50%);
 
     i {
@@ -46,18 +62,6 @@
 
     p {
       font-weight: 300;
-    }
-  }
-
-  &.active {
-    i {
-      background-color: $primary;
-      color: #ffffff;
-      border-color: $primary;
-    }
-
-    .content {
-      color: $primary;
     }
   }
 }
