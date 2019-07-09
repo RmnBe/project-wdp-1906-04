@@ -5,9 +5,22 @@ const slider = tns({
   mode: 'carousel',
   loop: false,
   items: 1,
-  slideBy: 1,
-  autoplay: true,
+  slideBy: 'page',
   autoWidth: true,
   speed: 400,
-  mouseDrag: true
+  mouseDrag: true,
+  controlsText: ['<', '>'],
+  nav: false,
+  responsive: {
+    410: {
+      item: 1
+    },
+    640: {
+      items: 2
+    },
+
+    768: {
+      items: 3
+    }
+  }
 });
