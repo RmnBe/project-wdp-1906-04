@@ -4,11 +4,24 @@
 const slider = tns({
   container: '.my-slider',
   mode: 'carousel',
-  items: 1,
-  autoWidth: true,
-  slideBy: 'page',
-  speed: 400,
-  autoplay: true,
   loop: false,
-  mouseDrag: true
+  items: 1,
+  slideBy: 'page',
+  autoWidth: true,
+  speed: 400,
+  mouseDrag: true,
+  controlsText: ['<', '>'],
+  nav: false,
+  responsive: {
+    410: {
+      item: 1
+    },
+    640: {
+      items: 2
+    },
+
+    768: {
+      items: 3
+    }
+  }
 });
