@@ -4,20 +4,44 @@
   .tns-outer {
     position: relative;
 
-    button {
-      display: none;
-    }
-
     .tns-horizontal.tns-subpixel > .tns-item {
       display: inline-flex;
     }
 
-    .my-slider {
-      position: relative;
-      display: block;
+    button {
+      display: none;
+    }
 
-      .slider-item {
+    .tns-nav {
+      position: absolute;
+      top: -60px;
+      right: 10px;
+
+      button {
+        padding: 0 0 0 1rem;
+        list-style: none;
+        transform: translateY(15px);
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+        margin-left: 0.5rem;
+        display: inline-flex;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+          @extend .animation-transition;
+        }
+      }
+
+      .my-slider {
         position: relative;
+        display: block;
+
+        .slider-item {
+          position: relative;
+        }
       }
     }
   }
