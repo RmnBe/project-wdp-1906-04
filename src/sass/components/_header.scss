@@ -124,6 +124,11 @@ header {
         height: auto;
         text-align: center;
       }
+      @include media-breakpoint-down(xs) {
+        height: auto;
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .logo-wrapper {
@@ -189,7 +194,8 @@ header {
     }
     @include media-breakpoint-down(xs) {
       background-color: white;
-      border: 1px solid #000;
+      border: none;
+      font-size: 25px;
       outline: none;
       padding: 9.5px 15px;
     }
@@ -205,6 +211,12 @@ header {
     height: 45px;
     color: $text-color;
     margin: 15px 0;
+    @include media-breakpoint-down(xs) {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
 
     .category {
       border-right: 1px solid $form-border-color;
@@ -212,6 +224,12 @@ header {
       position: relative;
       text-align: center;
       min-width: 250px;
+      @include media-breakpoint-only(lg) {
+        min-width: 190px;
+      }
+      @include media-breakpoint-down(xs) {
+        border: 1px solid $form-border-color;
+      }
 
       .menuWrapped {
         margin: 0;
@@ -233,6 +251,9 @@ header {
             justify-content: center;
             align-items: center;
             text-decoration: none;
+            @include media-breakpoint-only(lg) {
+              font-size: 15px;
+            }
 
             &:hover {
               background-color: #f7be62;
@@ -269,6 +290,9 @@ header {
         position: absolute;
         left: 10px;
         z-index: 0;
+        @include media-breakpoint-only(lg) {
+          left: 5px;
+        }
       }
 
       i:last-child {
@@ -282,6 +306,15 @@ header {
       display: flex;
       align-items: center;
       position: relative;
+      min-width: 250px;
+      @include media-breakpoint-only(lg) {
+        min-width: 180px;
+      }
+      @include media-breakpoint-down(xs) {
+        border: 1px solid $form-border-color;
+        border-top: none;
+        height: 45px;
+      }
 
       input {
         border: 0;
@@ -298,9 +331,12 @@ header {
         border: 0;
         background-color: transparent;
         outline: none;
-        @include media-breakpoint-between(lg, xl) {
+        @include media-breakpoint-up(xs) {
           position: absolute;
           right: 10px;
+        }
+        @include media-breakpoint-down(xs) {
+          right: 0;
         }
       }
     }
