@@ -2,16 +2,14 @@
 
 // eslint-disable-next-line no-unused-vars,no-undef
 const slider = tns({
-  container: '.my-slider',
-  mode: 'carousel',
-  loop: false,
-  items: 1,
-  slideBy: 'page',
-  autoWidth: true,
-  speed: 400,
-  mouseDrag: true,
-  controlsText: ['<', '>'],
+  container: document.querySelector('.my-slider'),
   nav: false,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  gutter: 20,
+  controls: false,
+  mouseDrag: true,
   responsive: {
     410: {
       item: 1
@@ -21,7 +19,7 @@ const slider = tns({
     },
 
     768: {
-      items: 3
+      items: 4
     }
   }
 });
