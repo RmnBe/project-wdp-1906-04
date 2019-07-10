@@ -1,42 +1,49 @@
 .section--blog-posts {
   position: relative;
 
-  .tns-horizontal.tns-subpixel > .tns-item {
-    display: inline-flex;
-    width: 350px;
-  }
-
-  .tns-controls {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &:focus {
-      outline: none;
-    }
-
-    li:hover {
-      cursor: pointer;
-    }
-    button {
-      background-color: #2a2a2a;
-      color: #ababab;
-      border-radius: 2px;
-      border: 1px solid #2a2a2a;
-      font-size: 50px;
-    }
-  }
-
-  .my-slider {
+  .tns-outer {
     position: relative;
-    display: block;
 
-    .slider-item {
-      position: relative;
-      padding: 1.5rem 0.75rem;
+    .tns-horizontal.tns-subpixel > .tns-item {
+      display: inline-flex;
+    }
+
+    button {
+      display: none;
+    }
+
+    .tns-nav {
+      position: absolute;
+      top: -60px;
+      right: 10px;
+
+      button {
+        padding: 0 0 0 1rem;
+        list-style: none;
+        transform: translateY(15px);
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+        margin-left: 0.5rem;
+        display: inline-flex;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+          @extend .animation-transition;
+        }
+      }
+
+      .my-slider {
+        position: relative;
+        display: block;
+
+        .slider-item {
+          position: relative;
+          padding: 1.5rem 0.75rem;
+        }
+      }
     }
   }
 }
