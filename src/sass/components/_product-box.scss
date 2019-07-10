@@ -4,41 +4,12 @@
   .tns-outer {
     position: relative;
 
+    button {
+      display: none;
+    }
+
     .tns-horizontal.tns-subpixel > .tns-item {
       display: inline-flex;
-      padding: 5px;
-    }
-
-    .tns-ovh {
-      width: 90%;
-      display: block;
-      margin-left: 30px;
-    }
-
-    .tns-controls {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      top: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      &:focus {
-        outline: none;
-      }
-
-      li:hover {
-        cursor: pointer;
-      }
-
-      button {
-        background-color: #2a2a2a;
-        color: #ababab;
-        border-radius: 2px;
-        border: 1px solid #2a2a2a;
-        font-size: 50px;
-      }
     }
 
     .my-slider {
