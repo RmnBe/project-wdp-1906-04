@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-unused-vars,no-undef
 const slider = tns({
   container: document.querySelector('.my-slider'),
-  nav: false,
+  loop: true,
   autoplay: true,
   autoplayButton: false,
   items: 1,
