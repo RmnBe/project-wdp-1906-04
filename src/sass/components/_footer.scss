@@ -2,6 +2,7 @@ footer {
   .footer-menu {
     background-color: $footer-bg;
     padding: 3rem 0;
+    text-align: center;
 
     .menu-wrapper {
       h6 {
@@ -22,6 +23,7 @@ footer {
 
             &:hover {
               color: #ffffff;
+              @extend .animation-transition;
             }
           }
         }
@@ -71,10 +73,18 @@ footer {
 
             &:hover {
               color: $primary;
+              @extend .animation-transition;
             }
           }
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .text-left {
+    width: 100%;
+    text-align: center;
   }
 }
