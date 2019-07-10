@@ -149,6 +149,40 @@
       height: calc(100% - 30px);
 
       .promotion-right-text {
+        position: absolute;
+        top: 25%;
+        height: 50%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 8%;
+
+        .promotion-right-btn {
+          position: absolute;
+          align-self: center;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%) translateY(50%);
+          text-transform: uppercase;
+          cursor: pointer;
+          background-color: white;
+          color: #000;
+          border: none;
+          padding: 12px 24px;
+          border: 1px solid #e1e1e1;
+          border-radius: 3px;
+          font-weight: 500;
+
+          &:hover {
+            background-color: $primary;
+            color: white;
+
+            @extend .animation-transition;
+          }
+        }
+
         h1 {
           font-weight: 300;
 
@@ -161,65 +195,29 @@
           font-weight: 300;
         }
       }
-    }
 
-    .promotion-buttons {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      height: 30px;
-      line-height: 30px;
+      .promotion-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
 
-      .promotion-arrow-btn {
-        width: 50%;
-        text-align: center;
-        background-color: #000;
+        .promotion-arrow-btn* {
+          width: 50%;
+          text-align: center;
+          background-color: #000;
 
-        a {
-          color: #fff;
+          a {
+            color: #fff;
+          }
+
+          &:hover {
+            background-color: $primary;
+
+            @extend .animation-transition;
+          }
         }
-
-        &:hover {
-          background-color: $primary;
-
-          @extend .animation-transition;
-        }
-      }
-    }
-  }
-
-  .promotion-right-text {
-    position: absolute;
-    top: 25%;
-    height: 50%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 8%;
-
-    .promotion-right-btn {
-      position: absolute;
-      align-self: center;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) translateY(50%);
-      text-transform: uppercase;
-      cursor: pointer;
-      background-color: white;
-      color: #000;
-      border: none;
-      padding: 12px 24px;
-      border: 1px solid #e1e1e1;
-      border-radius: 3px;
-      font-weight: 500;
-
-      &:hover {
-        background-color: $primary;
-        color: white;
-
-        @extend .animation-transition;
       }
     }
   }
