@@ -5,6 +5,10 @@
     border-bottom: 4px solid #e2e2e2;
   }
 
+  .col {
+    margin-right: 80px;
+  }
+
   .heading {
     position: relative;
 
@@ -29,6 +33,7 @@
 
   .menu {
     text-align: center;
+    margin-right: 100px;
     ul {
       margin: 0;
       padding: 0;
@@ -63,6 +68,8 @@
   }
 
   .dots {
+    display: none;
+
     ul {
       margin: 0;
       padding: 0 0 0 1rem;
