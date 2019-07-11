@@ -1,15 +1,26 @@
 // implementation of the carousel
 // eslint-disable-next-line no-unused-vars,no-undef
 const slider = tns({
-  container: '.my-slider',
+  container: '.promotion-right-slider',
   mode: 'carousel',
-  loop: false,
+  loop: true,
   items: 1,
   slideBy: 'page',
-  // autoWidth: true,
   speed: 400,
   mouseDrag: true,
-  controlsContainer: '.my-controls',
-  // controlText: ['<', '>'],
+  controlsContainer: '.promotion-buttons-controls',
   nav: false
+});
+// implementation of the carousel
+// eslint-disable-next-line no-unused-vars,no-undef
+tns({
+  container: '.hot-deals-slider',
+  items: 1,
+  controls: false,
+  nav: false,
+  slideBy: 'page',
+  mouseDrag: true,
+  loop: true,
+  autoplayTimeout: 4000,
+  speed: 1500
 });
