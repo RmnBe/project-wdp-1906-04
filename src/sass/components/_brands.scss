@@ -2,9 +2,8 @@
   position: relative;
 
   .tns-ovh {
-    width: 90%;
     display: block;
-    margin-left: 30px;
+    margin: 0 30px;
   }
 
   .tns-controls {
@@ -36,9 +35,10 @@
       top: -30px;
     }
   }
-  .tns-visually-hidden {
-    display: none;
-  }
+}
+
+.tns-outer > button {
+  display: none;
 }
 
 .brands {
