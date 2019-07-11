@@ -141,83 +141,110 @@
     text-transform: uppercase;
     height: 100%;
 
-    .photo {
-      background-image: url(https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-      background-size: cover;
-      overflow: hidden;
-      position: relative;
+    .tns-outer {
       height: calc(100% - 30px);
+      position: relative;
 
-      .promotion-right-text {
-        position: absolute;
-        top: 25%;
-        height: 50%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 8%;
+      .tns-ovh {
+        height: 100%;
+        position: relative;
 
-        .promotion-right-btn {
-          position: absolute;
-          align-self: center;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%) translateY(50%);
-          text-transform: uppercase;
-          cursor: pointer;
-          background-color: white;
-          color: #000;
-          border: none;
-          padding: 12px 24px;
-          border: 1px solid #e1e1e1;
-          border-radius: 3px;
-          font-weight: 500;
+        .tns-inner {
+          height: 100%;
+          position: relative;
 
-          &:hover {
-            background-color: $primary;
-            color: white;
+          .my-slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            overflow: hidden;
 
-            @extend .animation-transition;
+            .slider-item {
+              width: 100%;
+              height: 100%;
+
+              .photo {
+                background-image: url(https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                background-size: cover;
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+
+                .promotion-right-text {
+                  position: absolute;
+                  top: 25%;
+                  height: 50%;
+                  width: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  color: white;
+                  text-align: center;
+                  text-transform: uppercase;
+                  padding: 8%;
+
+                  .promotion-right-btn {
+                    position: absolute;
+                    align-self: center;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(50%);
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    background-color: white;
+                    color: #000;
+                    border: none;
+                    padding: 12px 24px;
+                    border: 1px solid #e1e1e1;
+                    border-radius: 3px;
+                    font-weight: 500;
+
+                    &:hover {
+                      background-color: $primary;
+                      color: white;
+
+                      @extend .animation-transition;
+                    }
+                  }
+
+                  h1 {
+                    font-weight: 300;
+
+                    span {
+                      font-weight: 700;
+                    }
+                  }
+
+                  h5 {
+                    font-weight: 300;
+                  }
+                }
+              }
+            }
           }
-        }
-
-        h1 {
-          font-weight: 300;
-
-          span {
-            font-weight: 700;
-          }
-        }
-
-        h5 {
-          font-weight: 300;
         }
       }
+    }
+  }
 
-      .promotion-buttons {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
+  .promotion-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
 
-        .promotion-arrow-btn* {
-          width: 50%;
-          text-align: center;
-          background-color: #000;
+    .promotion-arrow-btnL,
+    .promotion-arrow-btnR {
+      width: 50%;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      font-size: 1.5rem;
 
-          a {
-            color: #fff;
-          }
+      &:hover {
+        background-color: $primary;
 
-          &:hover {
-            background-color: $primary;
-
-            @extend .animation-transition;
-          }
-        }
+        @extend .animation-transition;
       }
     }
   }
