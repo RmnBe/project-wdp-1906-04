@@ -11,15 +11,22 @@ const slider = tns({
   controls: false,
   mouseDrag: true,
   responsive: {
-    410: {
-      item: 1
+    370: {
+      item: 1,
+      nav: false
     },
-    640: {
-      items: 2
+    576: {
+      items: 2,
+      nav: false
     },
 
     768: {
-      items: 4
+      items: 3,
+      nav: true
+    },
+    1200: {
+      items: 4,
+      nav: true
     }
   }
 });
