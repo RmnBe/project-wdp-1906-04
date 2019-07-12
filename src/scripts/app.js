@@ -10,17 +10,19 @@ const slider = tns({
   nav: false,
   mouseDrag: true,
   responsive: {
-    410: {
-      item: 2
+    370: {
+      item: 1
     },
-    760: {
-      item: 3
+    576: {
+      items: 2
     },
-    940: {
-      items: 4
+    768: {
+      items: 3
     },
-
-    1040: {
+    992: {
+      items: 5
+    },
+    1200: {
       items: 6
     }
   }
