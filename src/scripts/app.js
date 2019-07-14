@@ -5,6 +5,7 @@ const slider = tns({
   autoplay: true,
   autoplayButton: false,
   items: 1,
+  slideBy: 'page',
   gutter: 20,
   controlsText: ['<', '>'],
   nav: false,
