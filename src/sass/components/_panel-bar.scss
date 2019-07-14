@@ -99,21 +99,28 @@
   }
 }
 
-// Small devices (landscape phones, 576px and up)
+// Small devices (landscape phones, 370px and up)
 @media (min-width: 370px) {
   .col {
     margin-right: 0;
   }
+  .panel-bar {
+    height: 100px;
+    .menu {
+      position: absolute;
+      top: 50px;
+    }
+  }
 }
 
-// Medium devices (tablets, 768px and up)
+// Medium devices (tablets, 576px and up)
 @media (min-width: 576px) {
   .col {
     margin-right: 0;
   }
 }
 
-// Large devices (desktops, 992px and up)
+// Large devices (desktops, 768px and up)
 @media (min-width: 768px) {
   .col {
     margin-right: 160px;

@@ -15,10 +15,9 @@
     .tns-nav {
       position: absolute;
       top: -60px;
-      right: 10px;
+      right: 20px;
 
       button {
-        padding: 0 0 0 1rem;
         list-style: none;
         transform: translateY(15px);
         width: 13px;
@@ -201,5 +200,11 @@
     color: #ababab;
     padding-left: 40px;
     text-decoration: line-through;
+  }
+}
+
+@media (min-width: 370px) {
+  .my-slider {
+    width: 370px;
   }
 }
