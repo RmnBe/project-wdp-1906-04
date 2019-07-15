@@ -118,6 +118,13 @@
   .col {
     margin-right: 0;
   }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
+  }
 }
 
 // Large devices (desktops, 768px and up)
@@ -125,11 +132,25 @@
   .col {
     margin-right: 160px;
   }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .col {
     margin-right: 120px;
+  }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
   }
 }
