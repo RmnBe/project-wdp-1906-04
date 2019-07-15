@@ -5,6 +5,13 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+
+  &:not(.no-hover):hover {
+    color: #ffffff !important;
+    background-color: $primary;
+    text-decoration: none;
+    @extend .animation-transition;
+  }
 }
 
 .btn-main-small {
@@ -26,9 +33,15 @@
   &:hover {
     background-color: #2a2a2a;
     color: #ffffff;
+    @extend .animation-transition;
   }
 }
 
 .product-button {
   visibility: hidden;
+}
+
+.animation-transition {
+  transition: color $color-animation-duration,
+    background-color $background-color-animation-duration;
 }
