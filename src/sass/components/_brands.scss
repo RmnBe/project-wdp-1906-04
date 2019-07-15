@@ -8,6 +8,9 @@
 
   .tns-inner {
     max-width: 1500px;
+    #tns1 > .tns-item {
+      padding-right: 0;
+    }
   }
   .tns-controls {
     position: absolute;
