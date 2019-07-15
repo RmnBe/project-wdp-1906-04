@@ -7,7 +7,7 @@ const slider = tns({
   items: 1,
   slideBy: 'page',
   speed: 400,
-  mouseDrag: true,
+  mouseDrag: false,
   controlsContainer: '.promotion-buttons-controls',
   nav: false
 });
@@ -22,5 +22,9 @@ tns({
   slideBy: 'page',
   mouseDrag: true,
   loop: true,
-  speed: 1500
+  speed: 1000,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
+  autoplayTimeout: 4000
 });

@@ -47,20 +47,26 @@
           li {
             display: inline-block;
             margin-left: 0.5rem;
+          }
 
+          a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            border-radius: 6px;
+            background-color: #e1e1e1;
+
+            &.active,
+            &:hover {
+              background-color: $primary;
+
+              @extend .animation-transition;
+            }
+          }
+
+          .tns-nav-active {
             a {
-              display: block;
-              width: 13px;
-              height: 13px;
-              border-radius: 6px;
-              background-color: #e1e1e1;
-
-              &.active,
-              &:hover {
-                background-color: $primary;
-
-                @extend .animation-transition;
-              }
+              background-color: $primary;
             }
           }
         }
