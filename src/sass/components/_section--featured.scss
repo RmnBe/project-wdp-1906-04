@@ -132,6 +132,13 @@
       align-items: center;
 
       .outlines {
+        a {
+          &:hover {
+            background-color: $primary;
+
+            @extend .animation-transition;
+          }
+        }
       }
     }
   }
