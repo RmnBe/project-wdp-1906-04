@@ -11,16 +11,16 @@ const slider = tns({
   controlsContainer: '.promotion-buttons-controls',
   nav: false
 });
-// implementation of the carousel
+
 // eslint-disable-next-line no-unused-vars,no-undef
 tns({
   container: '.hot-deals-slider',
+  navContainer: '.hot-deals-dots',
   items: 1,
   controls: false,
-  nav: false,
+  nav: true,
   slideBy: 'page',
   mouseDrag: true,
   loop: true,
-  autoplayTimeout: 4000,
   speed: 1500
 });
