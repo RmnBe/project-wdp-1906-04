@@ -27,7 +27,7 @@ tns({
   autoplayButton: false,
   autoplayButtonOutput: false,
   autoplayTimeout: 4000
-
+});
 console.log('hello');
 
 // CHANGE MENU SIZE WHEN CLICK TO HAMBURGER < 576PX
