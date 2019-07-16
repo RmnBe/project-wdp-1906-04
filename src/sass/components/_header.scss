@@ -12,12 +12,13 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $secondcolor;
           font-size: 13px;
 
           &:hover {
             color: $primary;
             text-decoration: none;
+            @extend .animation-transition;
           }
         }
       }
@@ -69,7 +70,7 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $secondcolor;
 
         .cart-icon {
           background-color: $primary;
@@ -105,6 +106,7 @@ header {
         &:hover {
           .cart-icon {
             background-color: lighten($primary, 10%);
+            @extend .animation-transition;
           }
         }
       }
@@ -113,12 +115,14 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $secondcolor;
 
     .container > .row {
       height: 84px;
     }
-
+    .menuWrapped {
+      margin-top: 16px;
+    }
     .menu {
       display: flex;
       align-self: stretch;
@@ -141,15 +145,16 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $secondcolor;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $secondcolor;
               border-color: $primary;
+              @extend .animation-transition;
             }
 
             &.active {
@@ -169,8 +174,9 @@ header {
       .category {
         border-right: 1px solid $form-border-color;
         display: flex;
-        align-items: center;
         position: relative;
+        text-align: center;
+        min-width: 250px;
 
         i:first-child {
           color: $primary;
@@ -185,15 +191,55 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
+        .menuWrapped {
+          margin: 0;
+          padding: 0;
+          width: 100%;
           position: relative;
-          z-index: 1;
+          z-index: 2;
+
+          li {
+            list-style: none;
+            width: 100%;
+            height: 45px;
+            display: block;
+
+            a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+
+              &:hover {
+                background-color: #f7be62;
+                color: $text-color;
+                text-align: center;
+                line-height: 16px;
+                width: inherit;
+                height: inherit;
+              }
+            }
+
+            ul {
+              margin: 0;
+              padding: 0;
+              display: none;
+              position: absolute;
+              color: $text-color;
+              background: $secondcolor;
+              width: 100%;
+              border: 1px solid $form-border-color;
+              border-top: none;
+            }
+
+            &:hover {
+              ul {
+                display: block;
+              }
+            }
+          }
         }
       }
 
@@ -217,6 +263,152 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .top-bar {
+      .text-left {
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .text-right {
+        width: 150px;
+        ul {
+          li {
+            margin-left: 0.5rem;
+            a {
+              font-size: 0;
+              justify-content: flex-end;
+              i {
+                font-size: 13px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .company-claim {
+      position: relative;
+      .container {
+        > .row {
+          height: 180px;
+          text-align: right;
+
+          .phone-number {
+            position: absolute;
+            top: 120px;
+            right: 10px;
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .text-center {
+            img {
+              text-align: left;
+              float: left;
+            }
+          }
+          .cart {
+            .cart-box {
+              .cart-icon {
+                position: absolute;
+                top: -40px;
+                left: -50px;
+              }
+              .cart-counter {
+                position: absolute;
+                top: -15px;
+                left: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    .top-bar {
+      .icon-left {
+        margin: 0;
+        padding-right: 0;
+        max-width: 200px;
+        ul {
+          li {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .icon-right {
+        margin: 0;
+        padding-left: 0;
+        max-width: 120px;
+        right: -30px;
+        ul {
+          margin: 0;
+          li {
+            margin-left: 0.5rem;
+            a {
+              font-size: 0;
+              justify-content: flex-end;
+              i {
+                font-size: 13px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .company-claim {
+      position: relative;
+      .container {
+        > .row {
+          height: 220px;
+          text-align: right;
+
+          .phone-number {
+            position: absolute;
+            top: 170px;
+            right: 40px;
+            p {
+              font-size: 14px;
+            }
+          }
+
+          .text-center {
+            img {
+              text-align: left;
+              float: left;
+            }
+          }
+          .cart {
+            right: 20px;
+            .cart-box {
+              .cart-icon {
+                position: absolute;
+                top: -40px;
+                left: -50px;
+              }
+              .cart-counter {
+                position: absolute;
+                top: -15px;
+                left: -20px;
+              }
+            }
+          }
         }
       }
     }
