@@ -29,7 +29,6 @@
 
   .menu {
     text-align: center;
-    margin-right: 100px;
     ul {
       margin: 0;
       padding: 0;
@@ -64,8 +63,6 @@
   }
 
   .dots {
-    display: none;
-
     ul {
       margin: 0;
       padding: 0 0 0 1rem;
@@ -97,35 +94,35 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 370px) {
-  .col {
+  .margin-dots {
     margin-right: 0;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 576px) {
-  .col {
+  .margin-dots {
     margin-right: 0;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 768px) {
-  .col {
+  .margin-dots {
     margin-right: 160px;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .col {
-    margin-right: 140px;
+  .margin-dots {
+    margin-right: 120px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .col {
-    margin-right: 120px;
+  .margin-dots {
+    margin-right: 100px;
   }
 }
