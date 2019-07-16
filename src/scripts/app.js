@@ -14,3 +14,13 @@ bookmarks.addEventListener('click', function (event) {
   }
   elem.classList.add('active');
 });
+
+// Slider in Feedback section
+// eslint-disable-next-line no-unused-vars,no-undef
+const feedbackSlider = tns({
+  container: document.querySelector('.feedback-slider'),
+  autoplay: true,
+  controls: false,
+  mouseDrag: true,
+  autoplayButtonOutput: false
+});
