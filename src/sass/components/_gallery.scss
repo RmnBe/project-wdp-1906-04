@@ -30,30 +30,48 @@
     }
 
     .gallery-picture {
-      background-color: #f3f4f6;
       border: 1px solid #e1e1e1;
       height: 550px;
       width: 100%;
-      object-fit: contain;
       .gallery-box {
-        display: inline-block;
-        border: 1px solid #e1e1e1;
-        float: left;
-        width: 25%;
         text-align: center;
-        background-color: white;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            display: inline-block;
+            margin: 0 0.5rem;
+            font-weight: 600;
 
-        &:hover {
-          color: $primary;
-          border-top-color: $primary;
-          border-bottom: none;
-          background-color: #f3f4f6;
+            a {
+              color: rgb(42, 42, 42);
+              position: relative;
+              text-decoration: none;
+              font-size: 18px;
+              display: block;
+
+              &.active,
+              &:hover {
+                background-color: #e2e2e2;
+                &::before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  width: 100%;
+                  border-top: 4px solid $primary;
+                  @extend .animation-transition;
+                }
+              }
+            }
+          }
         }
       }
 
       .option-box-container {
         position: absolute;
         top: 200px;
+        z-index: 1;
 
         .option-box1 {
           height: 30px;
@@ -255,12 +273,13 @@
       .gallery-rating {
         height: 100px;
         width: 200px;
-        background-color: #ffffff;
+        background-color: #e2e2e2;
         position: absolute;
         bottom: 120px;
         right: 16px;
         display: flex;
         justify-content: center;
+        z-index: 1;
 
         .triangle-topleft {
           width: 0;
@@ -334,9 +353,9 @@
 
       .gallery-slider {
         height: 90px;
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         position: absolute;
-        bottom: 1px;
+        bottom: 2px;
         left: 17px;
         width: 537px;
         display: flex;
@@ -358,6 +377,12 @@
           &:hover {
             color: $primary;
           }
+        }
+
+        .photo {
+          position: absolute;
+          top: -430px;
+          z-index: 0;
         }
 
         .gallery-slider-box {
@@ -416,6 +441,10 @@
 .tns-outer {
   position: relative;
 
+  .tns-horizontal.tns-subpixel > .tns-item {
+    display: inline-flex;
+  }
+
   .tns-ovh {
     display: block;
     margin: 0 30px;
@@ -454,4 +483,22 @@
 
 .tns-outer > button {
   display: none;
+}
+
+.sectionDisplay {
+  display: none;
+  animation: fadein 3s;
+
+  &.show {
+    display: block;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
