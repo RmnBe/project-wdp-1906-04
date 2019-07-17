@@ -53,13 +53,13 @@
   .brand-box {
     height: 60px;
     width: 120px;
-    border: 1px solid gray;
-    margin: 5px;
+    padding: 0 5px;
   }
 
   .brand-picture {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border: 1px solid gray;
   }
 }
