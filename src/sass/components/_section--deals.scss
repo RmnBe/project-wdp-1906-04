@@ -1,5 +1,4 @@
 .section-deals {
-  display: flex;
   padding-bottom: 5rem;
 
   .left-deal-big {
@@ -28,14 +27,26 @@
         left: 5%;
         display: inline-flex;
         flex-direction: column;
+        @include media-breakpoint-only(lg) {
+          top: 42%;
+        }
+        @include media-breakpoint-only(md) {
+          top: 35%;
+        }
 
         h3 {
           margin: 0;
+          @include media-breakpoint-only(md) {
+            font-size: 24px;
+          }
         }
 
         h1 {
           margin: 0;
           font-weight: 700;
+          @include media-breakpoint-only(md) {
+            font-size: 28px;
+          }
         }
 
         p {
@@ -69,10 +80,17 @@
         right: 0;
         top: 10%;
         width: 65%;
+        @include media-breakpoint-only(lg) {
+          right: 4%;
+          top: 7%;
+        }
 
         h3 {
           font-weight: 300;
           margin: 0;
+          @include media-breakpoint-only(md) {
+            font-size: 16px;
+          }
 
           span {
             font-weight: 700;
@@ -82,6 +100,9 @@
         h5 {
           font-weight: 600;
           letter-spacing: 0.1rem;
+          @include media-breakpoint-only(md) {
+            font-size: 11px;
+          }
         }
 
         .right-up-deal-price {
@@ -103,12 +124,39 @@
         left: 50%;
         text-transform: uppercase;
         text-align: right;
+        @include media-breakpoint-only(lg) {
+          left: 46%;
+          top: 63%;
+        }
+        @include media-breakpoint-only(md) {
+          left: 49%;
+          top: 67%;
+        }
 
         h4 {
           color: $primary;
+          @include media-breakpoint-only(lg) {
+            padding-right: 40px;
+          }
+          @include media-breakpoint-only(md) {
+            font-size: 16px;
+          }
 
           span {
             font-weight: 700;
+            @include media-breakpoint-only(lg) {
+              display: block;
+              padding-right: 21px;
+            }
+          }
+        }
+
+        h6 {
+          @include media-breakpoint-only(md) {
+            font-size: 11px;
+          }
+          @include media-breakpoint-only(lg) {
+            padding-left: 5px;
           }
         }
       }
