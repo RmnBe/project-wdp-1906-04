@@ -74,6 +74,18 @@
     border: 1px solid #e1e1e1;
     margin-bottom: 2rem;
 
+    &:hover {
+      .product-button {
+        color: #ffffff !important;
+        text-decoration: none;
+        visibility: visible;
+      }
+
+      .no-hover {
+        background-color: $primary;
+      }
+    }
+
     .photo {
       position: relative;
       padding: 40px 10px 0 10px;

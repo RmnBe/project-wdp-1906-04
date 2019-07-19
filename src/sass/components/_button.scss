@@ -37,6 +37,10 @@
   }
 }
 
+.product-button {
+  visibility: hidden;
+}
+
 .animation-transition {
   transition: color $color-animation-duration,
     background-color $background-color-animation-duration;
