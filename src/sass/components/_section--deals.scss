@@ -1,0 +1,117 @@
+.section-deals {
+  display: flex;
+  padding-bottom: 5rem;
+
+  .left-deal-big {
+    padding: 0;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    .left-deal-small {
+      position: absolute;
+      top: 8%;
+      left: 8%;
+      height: 84%;
+      width: 84%;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      .left-deal-small-text {
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        display: inline-flex;
+        flex-direction: column;
+
+        h3 {
+          margin: 0;
+        }
+
+        h1 {
+          margin: 0;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1.8rem;
+          font-weight: 500;
+          border: 3px solid #fff;
+
+          //padding: 4px;
+          width: 55%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .right-deal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .right-up-deal {
+      height: 50%;
+      background-image: url("../images/deal_right_up.png");
+      background-size: cover;
+      overflow: hidden;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+
+      .right-up-deal-text {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 65%;
+
+        h3 {
+          font-weight: 300;
+          margin: 0;
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        h5 {
+          font-weight: 600;
+          letter-spacing: 0.1rem;
+        }
+
+        .right-up-deal-price {
+          color: $primary;
+        }
+      }
+    }
+
+    .right-down-deal {
+      height: 50%;
+      background-image: url("../images/deal_right_down.png");
+      background-size: cover;
+      overflow: hidden;
+      margin-top: 15px;
+
+      .right-down-deal-text {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        text-transform: uppercase;
+        text-align: right;
+
+        h4 {
+          color: $primary;
+
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
