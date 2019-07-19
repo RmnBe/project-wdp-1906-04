@@ -7,13 +7,22 @@
           <div class="gallery-line"></div>
         </div>
         <div class="gallery-picture">
-          <div class="gallery-box" id="bookmarks">
-            <ul>
-              <li><a href="#FEATURED" class="sectionActive active">FEATURED</a></li>
-              <li><a href="#SELLER" class="sectionActive">TOP SELLER</a></li>
-              <li><a href="#SALE" class="sectionActive">SALE OFF</a></li>
-              <li><a href="#RATED" class="sectionActive">TOP RATED</a></li>
-            </ul>
+          <div class="gallery-tab">
+            <button
+              class="gallery-box tablinks"
+              onclick="openGallery(event, 'FEATURED')"
+            >
+              FEATURED
+            </button>
+            <button class="gallery-box tablinks" onclick="openGallery(event, 'SELLER')">
+              TOP SELLER
+            </button>
+            <button class="gallery-box tablinks" onclick="openGallery(event, 'SALE')">
+              SALE OFF
+            </button>
+            <button class="gallery-box tablinks" onclick="openGallery(event, 'RATED')">
+              TOP RATED
+            </button>
           </div>
 
           <div class="option-box-container">
@@ -48,7 +57,7 @@
             </div>
           </div>
           <div class="gallery-slider">
-            <div class="sectionDisplay show" id="FEATURED">
+            <div class="tabcontent" id="FEATURED">
               <div class="photo"><img src="./images/gallery_featured0.jpeg" /></div>
               <div class="my-slider">
                 <div class="gallery-slider-box slider-item">
@@ -89,7 +98,7 @@
                 </div>
               </div>
             </div>
-            <div class="sectionDisplay" id="SELLER">
+            <div class="tabcontent" id="SELLER">
               <div class="photo"><img src="./images/gallery_top_seller0.jpeg" /></div>
               <div class="my-slider">
                 <div class="gallery-slider-box slider-item">
@@ -130,7 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="sectionDisplay" id="SALE">
+            <div class="tabcontent" id="SALE">
               <div class="photo"><img src="./images/gallery_sale0.jpeg" /></div>
               <div class="my-slider">
                 <div class="gallery-slider-box slider-item">
@@ -171,7 +180,7 @@
                 </div>
               </div>
             </div>
-            <div class="sectionDisplay" id="RATED">
+            <div class="tabcontent" id="RATED">
               <div class="photo"><img src="./images/gallery_top_rated0.jpeg" /></div>
               <div class="my-slider">
                 <div class="gallery-slider-box slider-item">
