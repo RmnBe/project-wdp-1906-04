@@ -5,10 +5,9 @@
     padding: 0;
     background-size: cover;
     overflow: hidden;
-    height: 100%;
 
     img {
-      width: 100%;
+      max-width: 100%;
     }
 
     .left-deal-small {
@@ -53,8 +52,6 @@
           font-size: 1.8rem;
           font-weight: 500;
           border: 3px solid #fff;
-
-          //padding: 4px;
           width: 55%;
           text-align: center;
         }
@@ -68,7 +65,7 @@
     height: 100%;
 
     .right-up-deal {
-      height: 50%;
+      height: 100%;
       background-image: url("../images/deal_right_up.png");
       background-size: cover;
       overflow: hidden;
@@ -80,6 +77,9 @@
         right: 0;
         top: 10%;
         width: 65%;
+        @include media-breakpoint-down(sm) {
+          position: static;
+        }
         @include media-breakpoint-only(lg) {
           right: 4%;
           top: 7%;
@@ -112,7 +112,7 @@
     }
 
     .right-down-deal {
-      height: 50%;
+      height: 100%;
       background-image: url("../images/deal_right_down.png");
       background-size: cover;
       overflow: hidden;
@@ -124,6 +124,9 @@
         left: 50%;
         text-transform: uppercase;
         text-align: right;
+        @include media-breakpoint-down(sm) {
+          position: static;
+        }
         @include media-breakpoint-only(lg) {
           left: 46%;
           top: 63%;
