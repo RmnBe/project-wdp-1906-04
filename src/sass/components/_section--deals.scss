@@ -71,6 +71,11 @@
       overflow: hidden;
       margin-bottom: 15px;
       text-transform: uppercase;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+        margin-top: 15px;
+        overflow: unset;
+      }
 
       .right-up-deal-text {
         position: absolute;
@@ -79,6 +84,9 @@
         width: 65%;
         @include media-breakpoint-down(sm) {
           position: static;
+          width: 100%;
+          padding: 27.5px 0;
+          text-align: center;
         }
         @include media-breakpoint-only(lg) {
           right: 4%;
@@ -126,6 +134,7 @@
         text-align: right;
         @include media-breakpoint-down(sm) {
           position: static;
+          padding: 45.5px 10px;
         }
         @include media-breakpoint-only(lg) {
           left: 46%;
