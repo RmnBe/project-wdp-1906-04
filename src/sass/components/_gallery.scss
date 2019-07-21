@@ -34,6 +34,7 @@
       border: 1px solid #e1e1e1;
       height: 550px;
       width: 100%;
+      position: relative;
 
       .gallery-box {
         display: inline-block;
@@ -337,7 +338,6 @@
         background-color: #ffffff;
         position: absolute;
         bottom: 1px;
-        left: 17px;
         width: 537px;
         display: flex;
         justify-content: center;
@@ -401,6 +401,98 @@
       .bedroom-bed {
         color: #d48d32;
         font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .furniture-gallery {
+    max-height: 1200px;
+
+    .left-panel-height {
+      max-height: 150px;
+    }
+
+    .right-panel {
+      max-height: 600px;
+    }
+
+    .left-panel {
+      .gallery-picture {
+        .gallery-box-featured {
+          height: 52px;
+          word-wrap: break-word;
+        }
+
+        .gallery-box-saleoff {
+          height: 52px;
+        }
+
+        .gallery-slider {
+          top: 458px;
+          max-width: 100%;
+        }
+
+        .gallery-rating {
+          top: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .furniture-gallery {
+    max-height: 1200px;
+
+    .left-panel-height {
+      max-height: 150px;
+    }
+
+    .right-panel {
+      max-height: 600px;
+    }
+
+    .left-panel {
+      .gallery-picture {
+        .gallery-slider {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .furniture-gallery {
+    min-height: 1100px;
+
+    .left-panel-height {
+      max-height: 800px;
+    }
+
+    .right-panel {
+      min-height: 450px;
+    }
+
+    .left-panel {
+      .gallery-picture {
+        .gallery-slider {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .furniture-gallery {
+    .left-panel {
+      .gallery-picture {
+        .gallery-slider {
+          width: 100%;
+        }
       }
     }
   }
