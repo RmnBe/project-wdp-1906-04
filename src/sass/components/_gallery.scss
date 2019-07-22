@@ -338,7 +338,7 @@
         background-color: #ffffff;
         position: absolute;
         bottom: 1px;
-        width: 537px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -481,6 +481,20 @@
         .gallery-slider {
           min-width: 100%;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .furniture-gallery {
+    height: auto;
+
+    .right-panel {
+      min-height: 500px;
+    }
+    .left-panel {
+      .gallery-picture {
       }
     }
   }
