@@ -1,3 +1,52 @@
+.section--products {
+  position: relative;
+
+  .tns-outer {
+    position: relative;
+
+    .tns-horizontal.tns-subpixel > .tns-item {
+      display: inline-flex;
+    }
+
+    button {
+      display: none;
+    }
+
+    .tns-nav {
+      position: absolute;
+      top: -60px;
+      right: 20px;
+
+      button {
+        list-style: none;
+        transform: translateY(15px);
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: none;
+        background-color: #e1e1e1;
+        margin-left: 0.5rem;
+        display: inline-flex;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+          @extend .animation-transition;
+        }
+      }
+
+      .my-slider {
+        position: relative;
+        display: block;
+
+        .slider-item {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
 .sectionDisplay {
   display: none;
   animation: fadein 3s;
@@ -14,62 +63,9 @@
       opacity: 1;
     }
   }
-  .marginButtons {
-    margin-top: 150px;
-  }
 
-  .bed1 {
-    background-image: url("https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed2 {
-    background-image: url("https://images.pexels.com/photos/879010/pexels-photo-879010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed3 {
-    background-image: url("https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed4 {
-    background-image: url("https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed5 {
-    background-image: url("https://images.pexels.com/photos/1608172/pexels-photo-1608172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed6 {
-    background-image: url("https://images.pexels.com/photos/1834707/pexels-photo-1834707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed7 {
-    background-image: url("https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .bed8 {
-    background-image: url("https://images.pexels.com/photos/1608178/pexels-photo-1608178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-  .chair1 {
-    background-image: url("https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .sofa1 {
-    background-image: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .table1 {
-    background-image: url("https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .dining1 {
-    background-image: url("https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  }
-
-  .backgroundImage {
-    background-size: cover;
-    min-height: 200px;
-  }
   .product-box {
+    position: relative;
     background-color: #ffffff;
     border: 1px solid #e1e1e1;
     margin-bottom: 2rem;
@@ -86,6 +82,59 @@
       }
     }
 
+    .bed1 {
+      background-image: url("https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed2 {
+      background-image: url("https://images.pexels.com/photos/879010/pexels-photo-879010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed3 {
+      background-image: url("https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed4 {
+      background-image: url("https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed5 {
+      background-image: url("https://images.pexels.com/photos/1608172/pexels-photo-1608172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed6 {
+      background-image: url("https://images.pexels.com/photos/1834707/pexels-photo-1834707.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed7 {
+      background-image: url("https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .bed8 {
+      background-image: url("https://images.pexels.com/photos/1608178/pexels-photo-1608178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .chair1 {
+      background-image: url("https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .sofa1 {
+      background-image: url("https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .table1 {
+      background-image: url("https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .dining1 {
+      background-image: url("https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    .backgroundImage {
+      background-size: cover;
+      min-height: 200px;
+    }
+
     .photo {
       position: relative;
       padding: 40px 10px 0 10px;
@@ -96,6 +145,9 @@
       }
       overflow: hidden;
       align-items: flex-end;
+      display: inherit;
+      vertical-align: top;
+      max-width: 100%;
 
       .sale {
         position: absolute;
@@ -108,9 +160,22 @@
         padding: 30px 15px 5px 15px;
       }
 
+      a {
+        img {
+          vertical-align: middle;
+          border-style: none;
+          max-width: 230px;
+          max-height: 200px;
+        }
+      }
+
       .buttons {
         display: flex;
         justify-content: space-between;
+      }
+
+      .marginButtons {
+        margin-top: 150px;
       }
     }
 
@@ -180,5 +245,11 @@
       padding-left: 40px;
       text-decoration: line-through;
     }
+  }
+}
+
+@media (min-width: 370px) {
+  .product-box {
+    width: 100%;
   }
 }
