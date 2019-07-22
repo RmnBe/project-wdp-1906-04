@@ -109,6 +109,9 @@
       top: 50px;
     }
   }
+  .margin-dots {
+    margin-right: 0;
+  }
 }
 
 // Medium devices (tablets, 576px and up)
@@ -122,6 +125,9 @@
       position: relative;
       top: 0;
     }
+  }
+  .margin-dots {
+    margin-right: 0;
   }
 }
 
@@ -137,8 +143,16 @@
       top: 0;
     }
   }
+  .margin-dots {
+    margin-right: 160px;
+  }
 }
-
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .margin-dots {
+    margin-right: 120px;
+  }
+}
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .menu {
@@ -150,5 +164,8 @@
       position: relative;
       top: 0;
     }
+  }
+  .margin-dots {
+    margin-right: 100px;
   }
 }
