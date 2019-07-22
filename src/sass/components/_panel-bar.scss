@@ -1,3 +1,7 @@
+.panel-bar > .col-12 {
+  padding: 0;
+}
+
 .panel-bar {
   margin-bottom: 30px;
 
@@ -29,6 +33,7 @@
 
   .menu {
     text-align: center;
+
     ul {
       margin: 0;
       padding: 0;
@@ -92,36 +97,74 @@
   }
 }
 
-// Small devices (landscape phones, 576px and up)
+// Small devices (landscape phones, 370px and up)
 @media (min-width: 370px) {
+  .menu {
+    margin-right: 0;
+  }
+  .panel-bar {
+    height: 100px;
+    .menu {
+      position: absolute;
+      top: 50px;
+    }
+  }
   .margin-dots {
     margin-right: 0;
   }
 }
 
-// Medium devices (tablets, 768px and up)
+// Medium devices (tablets, 576px and up)
 @media (min-width: 576px) {
+  .menu {
+    margin-right: 0;
+  }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
+  }
   .margin-dots {
     margin-right: 0;
   }
 }
 
-// Large devices (desktops, 992px and up)
+// Large devices (desktops, 768px and up)
 @media (min-width: 768px) {
+  .menu {
+    margin-right: 160px;
+  }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
+  }
   .margin-dots {
     margin-right: 160px;
   }
 }
-
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .margin-dots {
     margin-right: 120px;
   }
 }
-
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .menu {
+    margin-right: 120px;
+  }
+  .panel-bar {
+    height: auto;
+    .menu {
+      position: relative;
+      top: 0;
+    }
+  }
   .margin-dots {
     margin-right: 100px;
   }
