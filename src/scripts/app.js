@@ -15,10 +15,100 @@ bookmarks.addEventListener('click', function (event) {
   elem.classList.add('active');
 });
 
-// Implementation of carousel
-// eslint-disable-next-line no-unused-vars,no-undef
-const slider = tns({
-  container: document.querySelector('.my-slider'),
+// Implementation of carousel 60_section-gallery
+// eslint-disable-next-line no-unused-vars,no-undef,new-cap
+const sliderGalleryFeatured = new tns({
+  container: document.querySelector('.slider-gallery-featured'),
+  loop: true,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  slideBy: 'page',
+  controlsText: ['<', '>'],
+  nav: false,
+  mouseDrag: true,
+  responsive: {
+    370: {
+      item: 1
+    },
+    576: {
+      items: 2
+    },
+    768: {
+      items: 3
+    },
+    992: {
+      items: 5
+    },
+    1200: {
+      items: 6
+    }
+  }
+});
+
+// eslint-disable-next-line no-unused-vars,no-undef,new-cap
+const sliderGallerySeller = new tns({
+  container: document.querySelector('.slider-gallery-seller'),
+  loop: true,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  slideBy: 'page',
+  controlsText: ['<', '>'],
+  nav: false,
+  mouseDrag: true,
+  responsive: {
+    370: {
+      item: 1
+    },
+    576: {
+      items: 2
+    },
+    768: {
+      items: 3
+    },
+    992: {
+      items: 5
+    },
+    1200: {
+      items: 6
+    }
+  }
+});
+
+// eslint-disable-next-line no-unused-vars,no-undef,new-cap
+const sliderGallerySale = new tns({
+  container: document.querySelector('.slider-gallery-sale'),
+  loop: true,
+  autoplay: true,
+  autoplayButton: false,
+  items: 1,
+  slideBy: 'page',
+  controlsText: ['<', '>'],
+  nav: false,
+  mouseDrag: true,
+  responsive: {
+    370: {
+      item: 1
+    },
+    576: {
+      items: 2
+    },
+    768: {
+      items: 3
+    },
+    992: {
+      items: 5
+    },
+    1200: {
+      items: 6
+    }
+  }
+});
+
+// eslint-disable-next-line no-unused-vars,no-undef,new-cap
+const sliderGalleryRated = new tns({
+  container: document.querySelector('.slider-gallery-rated'),
   loop: true,
   autoplay: true,
   autoplayButton: false,
