@@ -257,7 +257,7 @@ header {
             @include media-breakpoint-only(lg) {
               font-size: 15px;
             }
-            
+
             &:hover,
             &.active {
               background-color: $primary;
@@ -268,7 +268,6 @@ header {
               height: inherit;
               border-color: $primary;
               @extend .animation-transition;
-
             }
           }
 
