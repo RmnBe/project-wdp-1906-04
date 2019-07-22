@@ -1,6 +1,39 @@
 .section--feedback {
   margin-top: 60px;
 
+  .row {
+    padding-right: 85px;
+  }
+
+  .tns-outer {
+    position: relative;
+  }
+
+  .tns-nav-active {
+    background: $primary;
+  }
+
+  .tns-nav {
+    position: absolute;
+    top: -44px;
+    right: 0;
+
+    button {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: none;
+      margin-left: 0.75rem;
+      outline: none;
+
+      &.active,
+      &:hover {
+        background-color: $primary;
+        @extend .animation-transition;
+      }
+    }
+  }
+
   .feedback {
     color: #676767;
     text-align: center;
