@@ -63,3 +63,15 @@
     border: 1px solid gray;
   }
 }
+
+@media (max-width: 370px) {
+  .brand-box {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-box {
+    padding: 0;
+  }
+}
