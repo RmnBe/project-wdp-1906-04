@@ -1,5 +1,6 @@
 // implementation of the carousel
 // Implementation of tiny-slider for 80_section-brands
+// implementation of the carousel 80_section-brands
 // eslint-disable-next-line no-unused-vars,no-undef
 const slider = tns({
   container: '.promotion-right-slider',
@@ -212,6 +213,37 @@ const sliderProductDining = new tns({
     },
     1200: {
       items: 4,
+      nav: true
+    }
+  }
+});
+
+// implementation of the carousel 70_section-blog-posts
+// eslint-disable-next-line no-unused-vars,no-undef,new-cap
+const sliderBlog = new tns({
+  container: document.querySelector('.slider-blog'),
+  autoplay: true,
+  loop: true,
+  autoplayButton: false,
+  items: 1,
+  gutter: 20,
+  controls: false,
+  mouseDrag: true,
+  responsive: {
+    370: {
+      item: 1,
+      nav: false
+    },
+    576: {
+      items: 2,
+      nav: false
+    },
+    768: {
+      items: 2,
+      nav: true
+    },
+    992: {
+      items: 3,
       nav: true
     }
   }
