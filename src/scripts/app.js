@@ -1,6 +1,39 @@
+// implementation of the carousel
+// Implementation of tiny-slider for 80_section-brands
 // implementation of the carousel 80_section-brands
 // eslint-disable-next-line no-unused-vars,no-undef
 const slider = tns({
+  container: '.promotion-right-slider',
+  mode: 'carousel',
+  loop: true,
+  items: 1,
+  slideBy: 'page',
+  speed: 400,
+  mouseDrag: false,
+  controlsContainer: '.promotion-buttons-controls',
+  nav: false
+});
+
+// eslint-disable-next-line no-unused-vars,no-undef
+tns({
+  container: '.hot-deals-slider',
+  navContainer: '.hot-deals-dots',
+  items: 1,
+  controls: false,
+  nav: true,
+  slideBy: 'page',
+  mouseDrag: true,
+  loop: true,
+  speed: 1000,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
+  autoplayTimeout: 4000
+});
+console.log('hello');
+
+// eslint-disable-next-line no-unused-vars,no-undef
+tns({
   container: document.querySelector('.my-slider'),
   loop: true,
   autoplay: true,
