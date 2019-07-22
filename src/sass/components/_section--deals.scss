@@ -1,0 +1,177 @@
+.section-deals {
+  padding-bottom: 5rem;
+
+  .left-deal-big {
+    padding: 0;
+    background-size: cover;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+
+    .left-deal-small {
+      position: absolute;
+      top: 8%;
+      left: 8%;
+      height: 84%;
+      width: 84%;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      .left-deal-small-text {
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        display: inline-flex;
+        flex-direction: column;
+        @include media-breakpoint-only(lg) {
+          top: 42%;
+        }
+        @include media-breakpoint-only(md) {
+          top: 35%;
+        }
+
+        h3 {
+          margin: 0;
+          @include media-breakpoint-only(md) {
+            font-size: 24px;
+          }
+        }
+
+        h1 {
+          margin: 0;
+          font-weight: 700;
+          @include media-breakpoint-only(md) {
+            font-size: 28px;
+          }
+        }
+
+        p {
+          font-size: 1.8rem;
+          font-weight: 500;
+          border: 3px solid #fff;
+          width: 55%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .right-deal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .right-up-deal {
+      height: 100%;
+      background-image: url("../images/deal_right_up.png");
+      background-size: cover;
+      overflow: hidden;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+        margin-top: 15px;
+        overflow: unset;
+      }
+
+      .right-up-deal-text {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        width: 65%;
+        @include media-breakpoint-down(sm) {
+          position: static;
+          width: 100%;
+          padding: 27.5px 0;
+          text-align: center;
+        }
+        @include media-breakpoint-only(lg) {
+          right: 4%;
+          top: 7%;
+        }
+
+        h3 {
+          font-weight: 300;
+          margin: 0;
+          @include media-breakpoint-only(md) {
+            font-size: 16px;
+          }
+
+          span {
+            font-weight: 700;
+          }
+        }
+
+        h5 {
+          font-weight: 600;
+          letter-spacing: 0.1rem;
+          @include media-breakpoint-only(md) {
+            font-size: 11px;
+          }
+        }
+
+        .right-up-deal-price {
+          color: $primary;
+        }
+      }
+    }
+
+    .right-down-deal {
+      height: 100%;
+      background-image: url("../images/deal_right_down.png");
+      background-size: cover;
+      overflow: hidden;
+      margin-top: 15px;
+
+      .right-down-deal-text {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        text-transform: uppercase;
+        text-align: right;
+        @include media-breakpoint-down(sm) {
+          position: static;
+          padding: 45.5px 10px;
+        }
+        @include media-breakpoint-only(lg) {
+          left: 46%;
+          top: 63%;
+        }
+        @include media-breakpoint-only(md) {
+          left: 49%;
+          top: 67%;
+        }
+
+        h4 {
+          color: $primary;
+          @include media-breakpoint-only(lg) {
+            padding-right: 40px;
+          }
+          @include media-breakpoint-only(md) {
+            font-size: 16px;
+          }
+
+          span {
+            font-weight: 700;
+            @include media-breakpoint-only(lg) {
+              display: block;
+              padding-right: 21px;
+            }
+          }
+        }
+
+        h6 {
+          @include media-breakpoint-only(md) {
+            font-size: 11px;
+          }
+          @include media-breakpoint-only(lg) {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

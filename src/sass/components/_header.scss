@@ -119,152 +119,291 @@ header {
 
     .container > .row {
       height: 84px;
+      @include media-breakpoint-between(sm, md) {
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+      }
+      @include media-breakpoint-down(xs) {
+        height: auto;
+        display: flex;
+        justify-content: center;
+      }
     }
-    .menuWrapped {
-      margin-top: 16px;
-    }
-    .menu {
-      display: flex;
-      align-self: stretch;
 
-      ul {
+    .logo-wrapper {
+      position: relative;
+    }
+
+    .logo-img {
+      @include media-breakpoint-between(xs, xl) {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-self: stretch;
+    justify-content: center;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+
+        a {
+          color: $text-color;
+          text-transform: uppercase;
+          font-size: 12px;
+          padding: 1rem;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          border-top: 4px solid #ffffff;
+          font-weight: 500;
+          letter-spacing: 1px;
+
+          &:hover,
+          &.active {
+            background-color: $primary;
+            color: $secondcolor;
+            border-color: $primary;
+            @extend .animation-transition;
+          }
+
+          &.active {
+            border-color: $text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-btn {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+    @include media-breakpoint-down(xs) {
+      background-color: white;
+      border: none;
+      font-size: 25px;
+      outline: none;
+      padding: 9.5px 15px;
+    }
+  }
+
+  .form-wrapper {
+    width: auto;
+  }
+
+  .search-form {
+    border: 1px solid $form-border-color;
+    display: inline-flex;
+    height: 45px;
+    color: $text-color;
+    margin: 15px 0;
+    @include media-breakpoint-down(xs) {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .category {
+      border-right: 1px solid $form-border-color;
+      display: flex;
+      position: relative;
+      text-align: center;
+      min-width: 250px;
+      @include media-breakpoint-only(lg) {
+        min-width: 190px;
+      }
+      @include media-breakpoint-down(xs) {
+        border: 1px solid $form-border-color;
+      }
+
+      .menuWrapped {
         margin: 0;
         padding: 0;
-        display: flex;
+        width: 100%;
+        position: relative;
+        z-index: 2;
 
         li {
           list-style: none;
-          display: flex;
-          align-items: stretch;
+          width: 100%;
+          height: 45px;
+          display: block;
 
           a {
-            color: $text-color;
-            text-transform: uppercase;
-            font-size: 12px;
-            padding: 1rem;
-            text-decoration: none;
+            width: 100%;
+            height: 100%;
             display: flex;
+            justify-content: center;
             align-items: center;
-            border-top: 4px solid $secondcolor;
+            border-top: 4px solid #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
+            text-decoration: none;
+            @include media-breakpoint-only(lg) {
+              font-size: 15px;
+            }
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: $secondcolor;
+              color: $text-color;
+              text-align: center;
+              line-height: 16px;
+              width: inherit;
+              height: inherit;
               border-color: $primary;
               @extend .animation-transition;
             }
+          }
 
-            &.active {
-              border-color: $text-color;
+          ul {
+            margin: 0;
+            padding: 0;
+            display: none;
+            position: absolute;
+            color: $text-color;
+            background: $secondcolor;
+            width: 100%;
+            border: 1px solid $form-border-color;
+            border-top: none;
+          }
+
+          &:hover {
+            ul {
+              display: block;
             }
           }
         }
+      }
+
+      i:first-child {
+        color: $primary;
+        position: absolute;
+        left: 10px;
+        z-index: 0;
+        @include media-breakpoint-only(lg) {
+          left: 5px;
+        }
+      }
+
+      i:last-child {
+        position: absolute;
+        right: 10px;
+        z-index: 0;
       }
     }
 
-    .search-form {
-      border: 1px solid $form-border-color;
-      display: inline-flex;
-      height: 45px;
-      color: $text-color;
+    .search-field {
+      display: flex;
+      align-items: center;
+      position: relative;
+      min-width: 250px;
+      @include media-breakpoint-only(lg) {
+        min-width: 180px;
+      }
+      @include media-breakpoint-down(xs) {
+        border: 1px solid $form-border-color;
+        border-top: none;
+        height: 45px;
+      }
 
-      .category {
-        border-right: 1px solid $form-border-color;
-        display: flex;
-        position: relative;
-        text-align: center;
-        min-width: 250px;
+      input {
+        border: 0;
+        padding-left: 10px;
+        font-size: 14px;
+        outline: none;
 
-        i:first-child {
-          color: $primary;
-          position: absolute;
-          left: 10px;
-          z-index: 0;
+        &::placeholder {
+          color: $text-color;
         }
+      }
 
-        i:last-child {
+      button {
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        @include media-breakpoint-up(xs) {
           position: absolute;
           right: 10px;
-          z-index: 0;
         }
-
-        .menuWrapped {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          position: relative;
-          z-index: 2;
-
-          li {
-            list-style: none;
-            width: 100%;
-            height: 45px;
-            display: block;
-
-            a {
-              width: 100%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              text-decoration: none;
-
-              &:hover {
-                background-color: #f7be62;
-                color: $text-color;
-                text-align: center;
-                line-height: 16px;
-                width: inherit;
-                height: inherit;
-              }
-            }
-
-            ul {
-              margin: 0;
-              padding: 0;
-              opacity: 0;
-              position: absolute;
-              color: $text-color;
-              background: $secondcolor;
-              width: 100%;
-              border: 1px solid $form-border-color;
-              border-top: none;
-            }
-
-            &:hover {
-              ul {
-                opacity: 1;
-              }
-            }
-          }
+        @include media-breakpoint-down(xs) {
+          right: 0;
         }
       }
+    }
+  }
+}
 
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
-
-          &::placeholder {
-            color: $text-color;
-          }
-        }
-
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
-        }
+//HAMBURGER
+body.active-menu {
+  header {
+    .menu-bar {
+      height: 100vh;
+      background-color: #fff;
+      transition: 0.4s;
+      z-index: 100;
+    }
+    .container > .row {
+      .logo-img {
+        display: block;
       }
+    }
+
+    .menu {
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
+    }
+
+    .menu-btn {
+      @include media-breakpoint-down(xs) {
+        background-color: white;
+        border: none;
+        font-size: 25px;
+        outline: none;
+        display: block;
+        position: static;
+      }
+    }
+
+    .menu-list {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    .top-bar {
+      display: none;
+    }
+
+    .company-claim {
+      display: none;
+    }
+
+    .form-wrapper {
+      display: none;
+    }
+    .logo-active-menu-wrapper {
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      padding: 30px;
     }
   }
 }
