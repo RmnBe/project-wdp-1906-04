@@ -7,22 +7,13 @@
           <div class="gallery-line"></div>
         </div>
         <div class="gallery-picture">
-          <div class="gallery-tab">
-            <button
-              class="gallery-box tablinks"
-              onclick="openGallery(event, 'FEATURED')"
-            >
+          <div class="gallery-tab" id="gallery-tab">
+            <button class="gallery-box tablinks active" id="gallery-featured">
               FEATURED
             </button>
-            <button class="gallery-box tablinks" onclick="openGallery(event, 'SELLER')">
-              TOP SELLER
-            </button>
-            <button class="gallery-box tablinks" onclick="openGallery(event, 'SALE')">
-              SALE OFF
-            </button>
-            <button class="gallery-box tablinks" onclick="openGallery(event, 'RATED')">
-              TOP RATED
-            </button>
+            <button class="gallery-box tablinks" id="gallery-seller">TOP SELLER</button>
+            <button class="gallery-box tablinks" id="gallery-sale">SALE OFF</button>
+            <button class="gallery-box tablinks" id="gallery-rated">TOP RATED</button>
           </div>
 
           <div class="option-box-container">
@@ -57,7 +48,7 @@
             </div>
           </div>
           <div class="gallery-slider">
-            <div class="tabcontent" id="FEATURED">
+            <div class="tabcontent show" id="FEATURED">
               <div class="photo"><img src="./images/gallery_featured0.jpeg" /></div>
               <div class="slider-gallery-featured">
                 <div class="gallery-slider-box slider-item">

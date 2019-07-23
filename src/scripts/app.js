@@ -138,7 +138,16 @@ const sliderGalleryRated = new tns({
 
 // Add script to gallery
 // eslint-disable-next-line no-unused-vars
-function openGallery (evt, cityName) {
+var galleryTab = document.getElementById('gallery-tab');
+
+// eslint-disable-next-line no-unused-vars
+galleryTab.addEventListener('click', function (event) {
+  event.preventDefault();
+  // eslint-disable-next-line no-unused-vars,no-undef
+  var elem =
+    event.target.tagName === 'button' ? event.target.parentElement : event.target;
+  // eslint-disable-next-line no-redeclare,no-undef
+  var galleryName = elem.getAttribute(id);
   // Declare all variables
   var i, tabcontent, tablinks;
   // Get all elements with class="tabcontent" and hide them
@@ -152,6 +161,6 @@ function openGallery (evt, cityName) {
     tablinks[i].className = tablinks[i].className.replace(' active', '');
   }
   // Show the current tab
-  document.getElementById(cityName).style.display = 'block';
-  evt.currentTarget.className += ' active';
-}
+  document.getElementById(galleryName).style.display = 'block';
+  event.currentTarget.className += ' active';
+});
