@@ -1,0 +1,63 @@
+.banner {
+  width: 100%;
+  height: 250px;
+  background-color: #3f3f3f;
+  position: relative;
+
+  .banner-text {
+    color: white;
+
+    .banner-heading {
+      display: flex;
+      justify-content: center;
+      font-size: 44px;
+      position: absolute;
+      top: 70px;
+      left: 28%;
+
+      .banner-heading-ferniture {
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+
+    .banner-discount {
+      display: flex;
+      justify-content: center;
+      letter-spacing: 10px;
+      position: absolute;
+      top: 120px;
+      left: 29%;
+      font-size: 18px;
+
+      .banner-text-discount {
+        color: $primary;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .location-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #e1e1e1;
+    position: absolute;
+    bottom: 0px;
+
+    .location {
+      font-size: 13px;
+      margin-left: 15px;
+      margin-top: 15px;
+
+      .direction {
+        margin-right: 6px;
+        margin-left: 6px;
+      }
+
+      .location-furniture {
+        color: $primary;
+      }
+    }
+  }
+}
