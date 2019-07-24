@@ -35,7 +35,7 @@ dla plików, które zostały wybrane do za-commit'owania.
 
 ## Konwencje i dobre praktyki
 
-1. Wszytskie pliki wykorzystywane do edycji strony umieszczone są w pliku "src".
+1. Wszytskie pliki wykorzystywane do edycji strony umieszczone są w serwisie GitHub pod adresem: [Repozytorium projektu](https://github.com/JayFromEsumo/project-wdp-1906-04).
 
 Odpowiednio pliki:
 
