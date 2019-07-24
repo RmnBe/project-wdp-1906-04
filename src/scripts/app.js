@@ -139,18 +139,17 @@ const sliderGalleryRated = new tns({
 // Add script to gallery
 // eslint-disable-next-line no-unused-vars
 var galleryTab = document.getElementById('gallery-tab');
-var tablinks = document.querySelectorAll('#gallery-tab tablinks');
+var tablinks = document.querySelectorAll('#gallery-tab a');
 
 // eslint-disable-next-line no-unused-vars
 galleryTab.addEventListener('click', function (event) {
   event.preventDefault();
   // eslint-disable-next-line no-unused-vars,no-undef
-  var elem =
-    event.target.tagName === 'button' ? event.target.parentElement : event.target;
+  var elem = event.target.tagName === 'a' ? event.target.parentElement : event.target;
   // eslint-disable-next-line no-redeclare,no-undef
-  var galleryName = elem.getAttribute('id');
+  var id = elem.getAttribute('href');
   document.querySelector('.tabcontent.show').classList.remove('show');
-  document.querySelector(galleryName).classList.add('show');
+  document.querySelector(id).classList.add('show');
   for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].classList.remove('active');
   }
