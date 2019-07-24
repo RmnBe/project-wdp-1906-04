@@ -9,7 +9,7 @@ const slider = tns({
   items: 1,
   slideBy: 'page',
   speed: 400,
-  mouseDrag: false,
+  mouseDrag: true,
   controlsContainer: '.promotion-buttons-controls',
   nav: false
 });
