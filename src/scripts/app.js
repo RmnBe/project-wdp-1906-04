@@ -139,6 +139,7 @@ const sliderGalleryRated = new tns({
 // Add script to gallery
 // eslint-disable-next-line no-unused-vars
 var galleryTab = document.getElementById('gallery-tab');
+var tablinks = document.querySelectorAll('#gallery-tab tablinks');
 
 // eslint-disable-next-line no-unused-vars
 galleryTab.addEventListener('click', function (event) {
@@ -147,20 +148,11 @@ galleryTab.addEventListener('click', function (event) {
   var elem =
     event.target.tagName === 'button' ? event.target.parentElement : event.target;
   // eslint-disable-next-line no-redeclare,no-undef
-  var galleryName = elem.getAttribute(id);
-  // Declare all variables
-  var i, tabcontent, tablinks;
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName('tabcontent');
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none';
+  var galleryName = elem.getAttribute('id');
+  document.querySelector('.tabcontent.show').classList.remove('show');
+  document.querySelector(galleryName).classList.add('show');
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove('active');
   }
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName('tablinks');
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(' active', '');
-  }
-  // Show the current tab
-  document.getElementById(galleryName).style.display = 'block';
-  event.currentTarget.className += ' active';
+  elem.classList.add('active');
 });
