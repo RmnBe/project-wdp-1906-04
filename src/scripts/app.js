@@ -137,16 +137,13 @@ const sliderGalleryRated = new tns({
 });
 
 // Add script to gallery
-// eslint-disable-next-line no-unused-vars
+
 var galleryTab = document.getElementById('gallery-tab');
 var tablinks = document.querySelectorAll('#gallery-tab a');
 
-// eslint-disable-next-line no-unused-vars
 galleryTab.addEventListener('click', function (event) {
   event.preventDefault();
-  // eslint-disable-next-line no-unused-vars,no-undef
   var elem = event.target.tagName === 'a' ? event.target.parentElement : event.target;
-  // eslint-disable-next-line no-redeclare,no-undef
   var id = elem.getAttribute('href');
   document.querySelector('.tabcontent.show').classList.remove('show');
   document.querySelector(id).classList.add('show');
@@ -154,4 +151,16 @@ galleryTab.addEventListener('click', function (event) {
     tablinks[i].classList.remove('active');
   }
   elem.classList.add('active');
+});
+
+// Clicking on the thumbnail makes the current main photo disappear
+var gallerySlider = document.getElementById('slider-gallery-featured');
+// eslint-disable-next-line no-unused-vars
+var galleryImg = document.querySelectorAll('#slider-gallery-featured img');
+
+gallerySlider.addEventListener('click', function (event) {
+  event.preventDefault();
+  var elem = event.target.tagName === 'img' ? event.target.parentElement : event.target;
+  // eslint-disable-next-line no-unused-vars
+  var img = elem.getAttribute('src');
 });
